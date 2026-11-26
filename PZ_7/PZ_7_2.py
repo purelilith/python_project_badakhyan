@@ -4,11 +4,11 @@
 # позиции, в которой расположена первая ошибочная закрывающая скобка,
 # или, если закрывающих скобок не хватает, число -1.
 
-text = input("Введите строку (латинские буквы и скобки): ")
+text = input("Введите строку (латинские буквы, скобки): ")
 
-while not all((ch.isascii() and ch.isalpha()) or ch in "()" for ch in text):
+while not all((ch.isascii() and ch.isalpha()) or ch in "() " for ch in text):
     print("Неправильно ввели!")
-    text = input("Введите строку (латинские буквы и скобки): ")
+    text = input("Введите строку (латинские буквы, скобки): ")
 
 balance = 0
 result = 0
